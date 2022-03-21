@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image } from "react-native"
 
-const Filter2 = ({
+const Filter9 = ({
     face: {
         bounds: {
             size: {
@@ -23,13 +23,13 @@ const Filter2 = ({
     return (
         <View style={{
             position: "absolute",
-            left: leftEyePosition.x - crownWidth * 0.6,
-            top: leftEyePosition.y - crownHeight * 1.4,
+            left: leftEyePosition.x - crownWidth * 0.8,
+            top: leftEyePosition.y - crownHeight * 1.8,
         }} >
             <Image
                 style={{
-                    width: crownWidth,
-                    height: crownHeight,
+                    width: crownWidth+2,
+                    height: crownHeight+40,
                     resizeMode: "contain",
                     transform: [
                         {
@@ -37,8 +37,8 @@ const Filter2 = ({
                         }
                     ]
                 }}
-                source={require("../assets/filter/crown-pic2.png")} />
+                source={require("../assets/filter/hat-pic2.png")} />
         </View>
     )
 }
-export default Filter2
+export default Filter9

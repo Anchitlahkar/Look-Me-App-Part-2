@@ -15,7 +15,19 @@ import { Camera } from 'expo-camera';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
 
 // importing filters
-import Filter1 from '../components/FIlter1';
+import Filter1 from '../components/Filter1';
+import Filter2 from '../components/Filter2';
+import Filter3 from '../components/Filter3';
+import Filter4 from '../components/Filter4';
+import Filter5 from '../components/Filter5';
+import Filter6 from '../components/Filter6';
+import Filter7 from '../components/Filter7';
+import Filter8 from '../components/Filter8';
+import Filter9 from '../components/Filter9';
+import Filter10 from '../components/Filter10';
+import Filter11 from '../components/Filter11';
+import Filter12 from '../components/Filter12';
+
 
 
 
@@ -90,12 +102,12 @@ export default class Main extends React.Component {
                         }}
                         onFacesDetected={this.onFacesDetected}
                         onFacesDetectionError={this.onFacesDetectionError}
-                        />
-                        {
+                    />
+                    {
                         this.state.faces.map(face => {
-                        return <Filter1 key={face.faceID} face={face} />
+                            return <Filter12 key={face.faceID} face={face} />
                         })
-                        }
+                    }
 
                 </View>
 
