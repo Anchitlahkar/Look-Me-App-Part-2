@@ -14,6 +14,9 @@ import * as FaceDetector from 'expo-face-detector';
 import { Camera } from 'expo-camera';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
 
+// importing filters
+import Filter1 from '../components/FIlter1';
+
 
 
 export default class Main extends React.Component {
@@ -87,7 +90,12 @@ export default class Main extends React.Component {
                         }}
                         onFacesDetected={this.onFacesDetected}
                         onFacesDetectionError={this.onFacesDetectionError}
-                    />
+                        />
+                        {
+                        this.state.faces.map(face => {
+                        return <Filter1 key={face.faceID} face={face} />
+                        })
+                        }
 
                 </View>
 
